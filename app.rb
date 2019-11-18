@@ -15,4 +15,25 @@ class App < Sinatra::Base
 
   # Code your final two routes here:
 
+  # get '/medicines/:id' do
+  #   @medicine = all_the_medicines.select do |medicine|
+  #     medicine.id == params[:id]
+  #   end.first
+  #   erb :'/medicines/show.html'
+  # end
+
+  get '/goodbye/:name' do
+    @user_name = params[:name]
+    "Goodbye, #{@user_name}."
+  end
+
+  get '/multiply/:num1/:num2' do
+    num1 = params[:num1]
+    num2 = params[:num2]
+    mul = num1.to_i * num2.to_i
+    "#{mul}"
+  
+  end
+
+
 end
